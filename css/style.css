@@ -6,19 +6,27 @@
     --link-visited: #082142;
     --link-active: #16262e;
     --alert-color: #cf0000;
+    --splash-color: #d1640a;
     --font-color-light: #dbdbdb;
     --light-gray: #ddd;
+    --off-gray: #ccc;
+    --med-gray: #b1b1b1;
+    --dark-gray: #535353;
+    --light-gray-darker: darken(var(--light-gray), 50%);
     --table-background: #f3f3f3;
     --box-shadow: 3px 3px 3px 1px rgba(34, 60, 80, 0.5);
     --box-shadow-hover: 0 0 3px 1px rgba(34, 60, 80, 0.5);
+    --box-shadow-spread: 0 0 20px rgba(34, 60, 80, 0.5);
     --gradient-bottom: linear-gradient(to top, #a2c9ce, #aed1d5, #bad8dc, #c6e0e2, #d2e7e9);
     --gradient-top: linear-gradient(to bottom, #a2cacf, #aed1d5, #bad8dc, #c6e0e2, #d2e7e9);
     --projects-background: #97d5da;
     --font-standard: 16px;
     --margin-standard: 15px;
     --padding-common: 20px;
-    --border-radius-standard: 8px;
+    --border-radius-standard: 20px;
     --half: 50%;
+    --font-weight-bold: 700;
+    --font-weight-slight-bold: 500;
 }
 
 * {
@@ -42,17 +50,17 @@ main {
 
 h1 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 a {
@@ -108,6 +116,10 @@ button:active,
 
 .asterisk {
     color: var(--alert-color);
+}
+
+.desert-icon {
+    filter: grayscale(100%) contrast(105%);
 }
 
 .profile__portrait {
@@ -169,6 +181,34 @@ button:active,
     padding-bottom: var(--padding-common);
 }
 
+.profile__greeting {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.heading-main {
+    font-size: 36px;
+    text-align: center;
+}
+
+.profile__button {
+    padding: 15px 35px;
+}
+
+.web-text {
+    background-color: var(--link-active);
+    color: var(--splash-color);
+    border-radius: 8px;
+    padding: 1px 5px;
+    font-weight: var(--font-weight-bold);
+    box-shadow: var(--box-shadow);
+    margin: auto 5px;
+}
+
+.about-main p:nth-of-type(3) {
+    margin-bottom: 40px;
+}
+
 .grid__item {
     display: inline-block;
     width: 33%;
@@ -183,7 +223,8 @@ button:active,
     }
 
     .projects__item {
-        background-color: var(--projects-background);
+        background-color: var(--light-gray);
+        border: 2px solid var(--med-gray);
         width: auto;
         min-height: auto;
         margin: 0;
@@ -253,9 +294,72 @@ button:active,
     margin-bottom: 0;
 }
 
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--off-gray);
+    border-radius: var(--border-radius-standard);
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: block;
+    text-align: left;
+}
+
+.contact-form {
+    background-color: var(--light-gray);
+    border: 2px solid var(--med-gray);
+    padding: 15px;
+    border-radius: var(--border-radius-standard);
+    margin: 25px;
+    box-shadow: var(--box-shadow);
+}
+
 .table__main {
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.form__button {
+    display: flex;
+    padding: 18px 32px;
+    border-radius: var(--border-radius-standard);
+    font-weight: var(--font-weight-slight-bold);
+}
+
+.contact-form--top>h3 {
+    font-size: 28px;
+    margin-top: 2px;
+}
+
+.contact-main__icons {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-icon {
+    padding: 10px;
+    filter: grayscale(100%);
+}
+
+.contact-main>h2 {
+    margin: 1px;
+}
+
+.contact-main>p {
+    margin-top: 1px;
+    margin-bottom: 22px;
+}
+
+.contactme-button {
+    margin: 30px auto;
 }
 
 table {
@@ -263,14 +367,15 @@ table {
     margin: 25px 0;
     font-size: 1em;
     min-width: 450px;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+    box-shadow: var(--box-shadow-spread);
+    border-radius: var(--border-radius-standard);
     overflow: hidden;
 }
 
 table thead tr {
-    background-color: var(--primary-color);
+    background-color: var(--dark-gray);
     color: var(--font-color-light);
+    font-weight: var(--font-weight-slight-bold);
     text-align: left;
 }
 
@@ -286,8 +391,9 @@ table tbody tr:nth-of-type(even) {
     background-color: var(--table-background);
 }
 
-table tbody tr:last-of-type {
-    border-bottom: 2px solid var(--primary-color);
+.table__background {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-standard);
 }
 
 @media all and (max-width: 500px) {
