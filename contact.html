@@ -36,14 +36,26 @@
         </header>
 
         <main class="contact-main">
-            <h1>Contact</h1>
+            <h1 class="heading-main border-bottom">Contact</h1>
             <h2>Jordan Nelson</h2>
-            <p>Located in<br>
-                Scottsdale, AZ</p>
-            <a href="tel:6232178386">Phone: 623-217-8386</a><br>
-            <a href="mailto:tubajordan@gmail.com">Email: tubajordan@gmail.com</a><br>
-            <a href="mailto:tubajordan@gmail.com">Contact Me</a>
+            <p>currently resides in Scottsdale, AZ</p>
 
+            <div class="contact-main__icons">
+                <a href="tel:6232178386" title="Call me today!"><img src="img/phone.svg" alt="phone icon"
+                        class="contact-icon" title="Call me today!"></a><a href="tel:6232178386"
+                    title="Call me today!">623-217-8386</a><a href="tel:6232178386" title="Call me today!"><img
+                        src="img/phone.svg" alt="phone icon" class="contact-icon" title="Call me today!"></a>
+            </div>
+            <div class="contact-main__icons">
+                <a href="mailto:tubajordan@gmail.com" title="Send me an email today!"><img src="img/email.svg"
+                        alt="email icon" class="contact-icon" title="Send me an email today!"></a><a
+                    href="mailto:tubajordan@gmail.com" title="Send me an email today!">tubajordan@gmail.com</a><a
+                    href="mailto:tubajordan@gmail.com"><img src="img/email.svg" alt="email icon" class="contact-icon"
+                        title="Send me an email today!"></a>
+            </div>
+            <div class="contactme-button">
+                <a href="mailto:tubajordan@gmail.com" class="button">Contact Me</a>
+            </div>
 
             <section>
                 <form action="#" method="post" id="contact-form" class="contact-form">
@@ -54,36 +66,32 @@
                     </div>
                     <div>
                         <label for="firstName" class="standard-label">First Name <span class="asterisk">*</span></label>
-                        <input type="text" id="firstName" placeholder="first name" required>
+                        <input type="text" id="firstName" placeholder="first name" title="Please enter your first name"
+                            required>
                         <label for="lastName" class="standard-label">Last Name <span class="asterisk">*</span></label>
-                        <input type="text" id="lastName" placeholder="last name" required>
+                        <input type="text" id="lastName" placeholder="last name" title="Please enter your last name"
+                            required>
                     </div>
                     <div>
                         <label for="email" class="standard-label">Email Address <span class="asterisk">*</span></label>
-                        <input type="email" id="email" placeholder="email" required>
+                        <input type="email" id="email" placeholder="email" title="Please enter your email address"
+                            required>
                         <label for="phone" class="standard-label">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            title="If you would like, please enter your phone number">
                     </div>
 
                     <div>
                         <label for="contact-textfield" class="standard-label">Please type your message in the text box
                             <span class="asterisk">*</span></label>
-                        <textarea id="contact-textfield" rows="3" cols="35" maxlength="250"
-                            placeholder="What can I do for you?" required></textarea>
+                        <textarea id="contact-textfield" rows="5" cols="35" maxlength="250"
+                            placeholder="What can I do for you?" title="Please type your message here"
+                            required></textarea>
                     </div>
-
+                    <br>
                     <div>
-                        <p>What is the best way for me to respond? <span class="asterisk">*</span></p>
-                        <div>
-                            <label for="radioOne" class="standard-label">Email</label>
-                            <input type="radio" id="radioOne" name="select" required>
-                            <label for="radioTwo" class="standard-label">Phone</label>
-                            <input type="radio" id="radioTwo" name="select" required>
-                        </div>
-                    </div>
-
-                    <div>
-                        <button type="submit" value="Submit">Send!</button>
+                        <button type="submit" value="Submit" class="form__button"
+                            title="Send your message">Send!</button>
                     </div>
                 </form>
             </section>
