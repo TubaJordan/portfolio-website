@@ -5,8 +5,8 @@
     --link-main: #294f66;
     --link-visited: #082142;
     --link-active: #16262e;
-    --alert-color: #cf0000;
-    --splash-color: #d1640a;
+    --alert-color: #c70000;
+    --splash-color: #d56e32;
     --font-color-light: #dbdbdb;
     --light-gray: #ddd;
     --off-gray: #ccc;
@@ -286,12 +286,15 @@ button:active,
     text-align: center;
     flex-direction: column;
     align-items: center;
-    width: var(--half);
     margin: 0 auto;
 }
 
 .about-main h2 {
     margin-bottom: 0;
+}
+
+.about-main p {
+    padding: 5px 100px;
 }
 
 input,
@@ -404,6 +407,15 @@ table tbody tr:nth-of-type(even) {
     h1 {
         font-size: 25px;
     }
+
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 20px;
+    }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -413,6 +425,15 @@ table tbody tr:nth-of-type(even) {
 
     h1 {
         font-size: 28px;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 30px;
     }
 }
 
