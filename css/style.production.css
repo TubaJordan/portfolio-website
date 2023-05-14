@@ -125,7 +125,7 @@ button:active {
 }
 
 .asterisk {
-    color: #cf0000;
+    color: #c70000;
 }
 
 .desert-icon {
@@ -224,7 +224,7 @@ button:active {
 
 .web-text {
     background-color: #16262e;
-    color: #d1640a;
+    color: #d56e32;
     border-radius: 8px;
     padding: 1px 5px;
     font-weight: 700;
@@ -356,22 +356,7 @@ button:active {
     animation: 16s cloud-move-long infinite alternate linear;
 }
 
-.about-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 50%;
-    margin: 0 auto;
-}
-
+.about-main,
 .contact-main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -384,12 +369,15 @@ button:active {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 50%;
     margin: 0 auto;
 }
 
 .about-main h2 {
     margin-bottom: 0;
+}
+
+.about-main p {
+    padding: 5px 100px;
 }
 
 input {
@@ -527,6 +515,24 @@ table tbody tr:nth-of-type(even) {
     h1 {
         font-size: 25px;
     }
+
+    .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 20px;
+    }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -537,6 +543,24 @@ table tbody tr:nth-of-type(even) {
 
     h1 {
         font-size: 28px;
+    }
+
+    .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 30px;
     }
 }
 
